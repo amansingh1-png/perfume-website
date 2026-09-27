@@ -36,4 +36,4 @@ function resetPersonalised(){Object.keys(quizAnswers).forEach(k=>delete quizAnsw
 function submitContact(e){e.preventDefault();toast('Thank you — ROZANA will get back to you shortly.');e.target.reset()}
 function toggleMenu(){const m=$('#mobileMenu');m.classList.toggle('show')}
 window.addEventListener('scroll',()=>$('#nav').classList.toggle('scrolled',scrollY>30));document.addEventListener('mousemove',e=>{const g=$('.cursor-glow');if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'}});
-const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});$$('.reveal').forEach(x=>observer.observe(x));renderCart();updateSet();
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});$$('.reveal').forEach(x=>observer.observe(x));renderCart();
