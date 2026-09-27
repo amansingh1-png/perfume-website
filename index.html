@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ROZANA — premium fragrances crafted for your everyday.">
+  <title>ROZANA — Perfume For Your Everyday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow"></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home">
+      <span>ROZANA</span>
+      <small>PERFUME FOR YOUR EVERYDAY</small>
+    </a>
+    <nav class="links">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#fragrances">Fragrances</a>
+      <a href="#story">Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button aria-label="Search" class="icon-btn" onclick="alert('Search coming soon')">⌕</button>
+      <button aria-label="Account" class="icon-btn">♙</button>
+      <button aria-label="Cart" class="cart-btn" onclick="scrollToCart()">Cart <b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">PREMIUM FRAGRANCES</p>
+        <h1>Scents That<br>Stay With You</h1>
+        <p class="lead">Discover timeless fragrances crafted for your everyday moments.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#shop">Shop Now <span>→</span></a>
+          <a class="btn ghost" href="#shop">Explore Collection</a>
+        </div>
+        <div class="slider-dots"><b>01</b><span>02</span><span>03</span><span>04</span></div>
+      </div>
+      <div class="hero-art">
+        <div class="orbit"></div>
+        <img src="images/hero.jpg" alt="ROZANA premium fragrance">
+        <div class="script">More than<br>a fragrance.<br>It's a feeling.</div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><strong>◈</strong><span><b>Premium Quality</b><small>Authentic Products</small></span></div>
+      <div><strong>♧</strong><span><b>Fast Delivery</b><small>Across India</small></span></div>
+      <div><strong>▣</strong><span><b>Secure Payments</b><small>Multiple Options</small></span></div>
+      <div><strong>♡</strong><span><b>Easy Returns</b><small>Hassle Free</small></span></div>
+    </section>
+
+    <section class="section" id="shop">
+      <div class="section-head reveal">
+        <div><p class="eyebrow">SIGNATURE SCENTS</p><h2>Featured Collection</h2><p>Signature scents for every mood, every moment.</p></div>
+        <a href="#shop">View All →</a>
+      </div>
+      <div class="products">
+        <article class="product reveal" data-name="Noir Essence" data-price="2499">
+          <div class="product-img"><span>BEST SELLER</span><img src="images/noir.jpg" alt="Noir Essence"></div>
+          <p class="category">Woody · Spicy · Bold</p><h3>Noir Essence</h3>
+          <div class="price">₹2,499 <del>₹3,299</del><em>24% OFF</em></div>
+          <button class="add" onclick="addToCart('Noir Essence',2499)">Add to Cart</button>
+        </article>
+        <article class="product reveal" data-name="Blush Aura" data-price="2299">
+          <div class="product-img"><span>NEW</span><img src="images/blush.jpg" alt="Blush Aura"></div>
+          <p class="category">Floral · Fruity · Fresh</p><h3>Blush Aura</h3>
+          <div class="price">₹2,299 <del>₹2,999</del><em>24% OFF</em></div>
+          <button class="add" onclick="addToCart('Blush Aura',2299)">Add to Cart</button>
+        </article>
+        <article class="product reveal" data-name="Ocean Drive" data-price="2199">
+          <div class="product-img"><span>POPULAR</span><img src="images/ocean.jpg" alt="Ocean Drive"></div>
+          <p class="category">Citrus · Aquatic · Fresh</p><h3>Ocean Drive</h3>
+          <div class="price">₹2,199 <del>₹2,899</del><em>24% OFF</em></div>
+          <button class="add" onclick="addToCart('Ocean Drive',2199)">Add to Cart</button>
+        </article>
+        <article class="product reveal" data-name="Amber Touch" data-price="2799">
+          <div class="product-img"><span>LIMITED</span><img src="images/amber.jpg" alt="Amber Touch"></div>
+          <p class="category">Amber · Vanilla · Warm</p><h3>Amber Touch</h3>
+          <div class="price">₹2,799 <del>₹3,699</del><em>24% OFF</em></div>
+          <button class="add" onclick="addToCart('Amber Touch',2799)">Add to Cart</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="story-banner" id="story">
+      <div class="reveal">
+        <p class="eyebrow">THE ROZANA WORLD</p>
+        <h2>More Than a Fragrance.<br>It's a Lifestyle.</h2>
+        <p>Created for people who want their presence remembered — long after they leave the room.</p>
+        <a class="btn primary" href="#about">Discover Our Story</a>
+      </div>
+    </section>
+
+    <section class="split" id="about">
+      <div class="why reveal">
+        <p class="eyebrow">WHY ROZANA?</p><h2>Made To Be Remembered.</h2>
+        <div class="features">
+          <div><b>♧</b><strong>Long Lasting</strong><span>Fragrance that stays with you.</span></div>
+          <div><b>✦</b><strong>Premium Ingredients</strong><span>Thoughtfully selected notes.</span></div>
+          <div><b>♡</b><strong>100% Authentic</strong><span>Original ROZANA products.</span></div>
+          <div><b>∞</b><strong>Loved by Thousands</strong><span>Built around real fragrance lovers.</span></div>
+        </div>
+      </div>
+      <div class="notes reveal" id="fragrances">
+        <p class="eyebrow">FRAGRANCE NOTES</p><h2>Find Your Signature.</h2>
+        <div class="note-grid">
+          <div><b>TOP NOTES</b><span>Bergamot<br>Black Pepper<br>Lavender</span></div>
+          <div><b>HEART NOTES</b><span>Sandalwood<br>Cedarwood<br>Geranium</span></div>
+          <div><b>BASE NOTES</b><span>Vanilla<br>Amber<br>Musk</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="footer-brand"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small></div>
+    <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#story">Story</a></div>
+    <div><h4>Customer Care</h4><a href="#">Contact Us</a><a href="#">Track Order</a><a href="#">Returns & Refunds</a><a href="#">FAQ</a></div>
+    <div><h4>Follow Us</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">X / Twitter</a></div>
+    <div class="copyright">© 2026 ROZANA. All rights reserved.</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
