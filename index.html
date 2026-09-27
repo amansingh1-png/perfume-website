@@ -1,136 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="ROZANA — premium fragrances crafted for your everyday.">
-  <title>ROZANA — Perfume For Your Everyday</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ROZANA — premium fragrances crafted to leave an impression.">
+<title>ROZANA — More Than A Fragrance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="cursor-glow"></div>
-
-  <header class="nav" id="nav">
-    <a class="brand" href="#home">
-      <span>ROZANA</span>
-      <small>PERFUME FOR YOUR EVERYDAY</small>
-    </a>
-    <nav class="links">
-      <a href="#home">Home</a>
-      <a href="#shop">Shop</a>
-      <a href="#about">About</a>
-      <a href="#fragrances">Fragrances</a>
-      <a href="#story">Story</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <button aria-label="Search" class="icon-btn" onclick="alert('Search coming soon')">⌕</button>
-      <button aria-label="Account" class="icon-btn">♙</button>
-      <button aria-label="Cart" class="cart-btn" onclick="scrollToCart()">Cart <b id="cartCount">0</b></button>
+<div class="noise"></div><div class="cursor-glow"></div>
+<header class="nav" id="nav">
+  <a class="brand" href="#home"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small></a>
+  <nav class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Personalise</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <div class="nav-actions">
+    <button class="icon-btn" aria-label="Search" onclick="openSearch()">⌕</button>
+    <a class="icon-btn insta" aria-label="Instagram" href="https://www.instagram.com/_aman_singh__81?stkn=MWptejJ2N3R3ejg1Yw%3D%3D&utm_source=qr" target="_blank" rel="noreferrer">◎</a>
+    <button class="cart-btn" onclick="openCart()">Bag <b id="cartCount">0</b></button>
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobileMenu"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Personalise</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy reveal">
+    <p class="eyebrow">PREMIUM FRAGRANCES · ROZANA</p>
+    <h1>Scents that<br><i>stay with you.</i></h1>
+    <p class="lead">Discover expressive fragrances crafted for presence, confidence and everyday moments worth remembering.</p>
+    <div class="hero-buttons"><a class="btn primary" href="#shop">Shop Collection <span>↗</span></a><a class="btn ghost" href="#custom">Create Your Set</a></div>
+    <div class="hero-meta"><span>01</span><span>04</span><em>Signature Collection</em></div>
+  </div>
+  <div class="hero-art reveal"><div class="orbit o1"></div><div class="orbit o2"></div><img src="hero.jpg" alt="ROZANA premium perfume"><div class="hero-note">More than<br>a fragrance.<br><i>It's a feeling.</i></div></div>
+</section>
+<section class="marquee"><div>ROZANA · ELEVATE YOUR EVERYDAY · ROZANA · ELEVATE YOUR EVERYDAY ·</div></section>
+<section class="benefits"><div><strong>✦</strong><span><b>Premium Quality</b><small>Curated fragrance profiles</small></span></div><div><strong>↗</strong><span><b>Pan-India Delivery</b><small>Fast & trackable shipping</small></span></div><div><strong>⌁</strong><span><b>Secure Checkout</b><small>Multiple payment options</small></span></div><div><strong>♡</strong><span><b>Made To Gift</b><small>Personalised experiences</small></span></div></section>
+<section class="section" id="shop">
+ <div class="section-head reveal"><div><p class="eyebrow">THE SIGNATURE COLLECTION</p><h2>Find your <i>signature.</i></h2><p>Four moods. One unforgettable presence.</p></div><button class="text-btn" onclick="openSearch()">Search fragrances ⌕</button></div>
+ <div class="products">
+  <article class="product reveal" data-name="Noir Essence" data-price="2499" data-img="noir.jpg"><div class="product-img"><span>BEST SELLER</span><img src="noir.jpg" alt="Noir Essence"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Woody · Spicy · Bold</p><h3>Noir Essence</h3><div class="price">₹2,499 <del>₹3,299</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Noir Essence',2499,'noir.jpg')">Add to Bag</button></article>
+  <article class="product reveal" data-name="Blush Aura" data-price="2299" data-img="blush.jpg"><div class="product-img"><span>NEW</span><img src="blush.jpg" alt="Blush Aura"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Floral · Fruity · Fresh</p><h3>Blush Aura</h3><div class="price">₹2,299 <del>₹2,999</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Blush Aura',2299,'blush.jpg')">Add to Bag</button></article>
+  <article class="product reveal" data-name="Ocean Drive" data-price="2199" data-img="ocean.jpg"><div class="product-img"><span>POPULAR</span><img src="ocean.jpg" alt="Ocean Drive"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Citrus · Aquatic · Fresh</p><h3>Ocean Drive</h3><div class="price">₹2,199 <del>₹2,899</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Ocean Drive',2199,'ocean.jpg')">Add to Bag</button></article>
+  <article class="product reveal" data-name="Amber Touch" data-price="2799" data-img="amber.jpg"><div class="product-img"><span>LIMITED</span><img src="amber.jpg" alt="Amber Touch"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Amber · Vanilla · Warm</p><h3>Amber Touch</h3><div class="price">₹2,799 <del>₹3,699</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Amber Touch',2799,'amber.jpg')">Add to Bag</button></article>
+ </div>
+</section>
+<section class="experience"><div class="experience-copy reveal"><p class="eyebrow">THE ROZANA EXPERIENCE</p><h2>Wear the mood.<br><i>Leave the memory.</i></h2><p>Every bottle is designed to feel as considered as the fragrance inside it — understated, modern and unmistakably ROZANA.</p><a class="btn primary" href="#custom">Build Your Set ↗</a></div><div class="experience-art"><img src="rozana-reference.jpg" alt="ROZANA fragrance experience"></div></section>
+<section class="custom" id="custom">
+  <div class="custom-head reveal">
+    <p class="eyebrow">PERSONALISED BY YOU</p>
+    <h2>Create your <i>ROZANA set.</i></h2>
+    <p>Tell us about your day and we’ll match you with a fragrance mood — or skip straight to a quick pick.</p>
+  </div>
+  <div class="custom-grid">
+    <div class="set-preview reveal">
+      <div class="set-bottle"><span>ROZANA</span><small>PERSONALISED SET</small></div>
+      <div class="set-recommend" id="setRecommendation">Answer a few questions and reveal your signature.</div>
+      <div class="set-total"><span>Set total</span><strong id="setTotal">₹2,499</strong></div>
     </div>
-  </header>
-
-  <main>
-    <section class="hero" id="home">
-      <div class="hero-copy reveal">
-        <p class="eyebrow">PREMIUM FRAGRANCES</p>
-        <h1>Scents That<br>Stay With You</h1>
-        <p class="lead">Discover timeless fragrances crafted for your everyday moments.</p>
-        <div class="hero-buttons">
-          <a class="btn primary" href="#shop">Shop Now <span>→</span></a>
-          <a class="btn ghost" href="#shop">Explore Collection</a>
-        </div>
-        <div class="slider-dots"><b>01</b><span>02</span><span>03</span><span>04</span></div>
+    <div class="set-controls reveal">
+      <div class="mode-tabs"><button class="mode active" data-mode="day">Tell us about your day</button><button class="mode" data-mode="quick">Skip — quick pick by time</button></div>
+      <div id="dayQuiz" class="quiz">
+        <label>1. How much water do you drink in a day?</label>
+        <div class="pill-grid"><button class="answer" data-q="water" data-v="low">Less than 1L</button><button class="answer" data-q="water" data-v="medium">1–2L</button><button class="answer" data-q="water" data-v="high">2–3L</button><button class="answer" data-q="water" data-v="veryhigh">3L or more</button></div>
+        <label>2. Do you spend time outdoors or on fieldwork?</label>
+        <div class="pill-grid"><button class="answer" data-q="outdoor" data-v="indoor">Mostly indoors</button><button class="answer" data-q="outdoor" data-v="some">A couple of hours a day</button><button class="answer" data-q="outdoor" data-v="outdoor">Most of the day outside</button></div>
+        <label>3. Pick the vibe that feels most like you</label>
+        <div class="pill-grid"><button class="answer" data-q="vibe" data-v="soft">Floral and soft</button><button class="answer" data-q="vibe" data-v="clean">Clean and aquatic</button><button class="answer" data-q="vibe" data-v="bold">Bold and classic</button><button class="answer" data-q="vibe" data-v="trendy">Fun and trendy</button></div>
       </div>
-      <div class="hero-art">
-        <div class="orbit"></div>
-        <img src="hero.jpg" alt="ROZANA premium fragrance">
-        <div class="script">More than<br>a fragrance.<br>It's a feeling.</div>
+      <div id="quickQuiz" class="quiz hidden">
+        <label>1. When do you reach for a fragrance most?</label>
+        <div class="pill-grid"><button class="answer" data-q="time" data-v="morning">Early morning</button><button class="answer" data-q="time" data-v="work">Work hours</button><button class="answer" data-q="time" data-v="evening">Evenings out</button><button class="answer" data-q="time" data-v="night">Nights</button></div>
+        <label>2. How would you describe your pace?</label>
+        <div class="pill-grid"><button class="answer" data-q="pace" data-v="calm">Calm and unhurried</button><button class="answer" data-q="pace" data-v="fast">Fast and always moving</button><button class="answer" data-q="pace" data-v="bold">Bold, likes to stand out</button></div>
+        <label>3. What's the weather like most of the year?</label>
+        <div class="pill-grid"><button class="answer" data-q="weather" data-v="hot">Hot and humid</button><button class="answer" data-q="weather" data-v="cold">Cold winters</button><button class="answer" data-q="weather" data-v="moderate">Fairly moderate</button></div>
       </div>
-    </section>
-
-    <section class="benefits">
-      <div><strong>◈</strong><span><b>Premium Quality</b><small>Authentic Products</small></span></div>
-      <div><strong>♧</strong><span><b>Fast Delivery</b><small>Across India</small></span></div>
-      <div><strong>▣</strong><span><b>Secure Payments</b><small>Multiple Options</small></span></div>
-      <div><strong>♡</strong><span><b>Easy Returns</b><small>Hassle Free</small></span></div>
-    </section>
-
-    <section class="section" id="shop">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">SIGNATURE SCENTS</p><h2>Featured Collection</h2><p>Signature scents for every mood, every moment.</p></div>
-        <a href="#shop">View All →</a>
-      </div>
-      <div class="products">
-        <article class="product reveal" data-name="Noir Essence" data-price="2499">
-          <div class="product-img"><span>BEST SELLER</span><img src="noir.jpg" alt="Noir Essence"></div>
-          <p class="category">Woody · Spicy · Bold</p><h3>Noir Essence</h3>
-          <div class="price">₹2,499 <del>₹3,299</del><em>24% OFF</em></div>
-          <button class="add" onclick="addToCart('Noir Essence',2499)">Add to Cart</button>
-        </article>
-        <article class="product reveal" data-name="Blush Aura" data-price="2299">
-          <div class="product-img"><span>NEW</span><img src="blush.jpg" alt="Blush Aura"></div>
-          <p class="category">Floral · Fruity · Fresh</p><h3>Blush Aura</h3>
-          <div class="price">₹2,299 <del>₹2,999</del><em>24% OFF</em></div>
-          <button class="add" onclick="addToCart('Blush Aura',2299)">Add to Cart</button>
-        </article>
-        <article class="product reveal" data-name="Ocean Drive" data-price="2199">
-          <div class="product-img"><span>POPULAR</span><img src="ocean.jpg" alt="Ocean Drive"></div>
-          <p class="category">Citrus · Aquatic · Fresh</p><h3>Ocean Drive</h3>
-          <div class="price">₹2,199 <del>₹2,899</del><em>24% OFF</em></div>
-          <button class="add" onclick="addToCart('Ocean Drive',2199)">Add to Cart</button>
-        </article>
-        <article class="product reveal" data-name="Amber Touch" data-price="2799">
-          <div class="product-img"><span>LIMITED</span><img src="amber.jpg" alt="Amber Touch"></div>
-          <p class="category">Amber · Vanilla · Warm</p><h3>Amber Touch</h3>
-          <div class="price">₹2,799 <del>₹3,699</del><em>24% OFF</em></div>
-          <button class="add" onclick="addToCart('Amber Touch',2799)">Add to Cart</button>
-        </article>
-      </div>
-    </section>
-
-    <section class="story-banner" id="story">
-      <div class="reveal">
-        <p class="eyebrow">THE ROZANA WORLD</p>
-        <h2>More Than a Fragrance.<br>It's a Lifestyle.</h2>
-        <p>Created for people who want their presence remembered — long after they leave the room.</p>
-        <a class="btn primary" href="#about">Discover Our Story</a>
-      </div>
-    </section>
-
-    <section class="split" id="about">
-      <div class="why reveal">
-        <p class="eyebrow">WHY ROZANA?</p><h2>Made To Be Remembered.</h2>
-        <div class="features">
-          <div><b>♧</b><strong>Long Lasting</strong><span>Fragrance that stays with you.</span></div>
-          <div><b>✦</b><strong>Premium Ingredients</strong><span>Thoughtfully selected notes.</span></div>
-          <div><b>♡</b><strong>100% Authentic</strong><span>Original ROZANA products.</span></div>
-          <div><b>∞</b><strong>Loved by Thousands</strong><span>Built around real fragrance lovers.</span></div>
-        </div>
-      </div>
-      <div class="notes reveal" id="fragrances">
-        <p class="eyebrow">FRAGRANCE NOTES</p><h2>Find Your Signature.</h2>
-        <div class="note-grid">
-          <div><b>TOP NOTES</b><span>Bergamot<br>Black Pepper<br>Lavender</span></div>
-          <div><b>HEART NOTES</b><span>Sandalwood<br>Cedarwood<br>Geranium</span></div>
-          <div><b>BASE NOTES</b><span>Vanilla<br>Amber<br>Musk</span></div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer id="contact">
-    <div class="footer-brand"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small></div>
-    <div><h4>Quick Links</h4><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#story">Story</a></div>
-    <div><h4>Customer Care</h4><a href="#">Contact Us</a><a href="#">Track Order</a><a href="#">Returns & Refunds</a><a href="#">FAQ</a></div>
-    <div><h4>Follow Us</h4><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">X / Twitter</a></div>
-    <div class="copyright">© 2026 ROZANA. All rights reserved.</div>
-  </footer>
-
-  <div class="toast" id="toast"></div>
-  <script src="script.js"></script>
-</body>
-</html>
+      <div class="set-actions"><button class="btn primary" onclick="revealPersonalisedSet()">Reveal My Set ↗</button><button class="btn ghost" onclick="resetPersonalised()">Reset</button></div>
+      <div id="customResult" class="custom-result hidden"></div>
+    </div>
+  </div>
+</section>
+<section class="founder" id="about"><div class="founder-img reveal"><img src="ceo.jpg" alt="Aman Raj Singh, Founder & CEO of ROZANA"></div><div class="founder-copy reveal"><p class="eyebrow">FROM THE FOUNDER</p><h2>Built with a belief that <i>presence matters.</i></h2><p>ROZANA was created around one simple idea: fragrance should become part of your identity, not just another product on your shelf.</p><p>We are building a modern fragrance house where thoughtful design, memorable scent profiles and a personal experience come together.</p><div class="signature">Aman Raj Singh <span>Founder & CEO · ROZANA</span></div></div></section>
+<section class="notes"><div class="notes-head reveal"><p class="eyebrow">FRAGRANCE NOTES</p><h2>Choose by <i>feeling.</i></h2></div><div class="note-grid"><div class="note reveal"><span>01</span><b>NOIR</b><p>Bergamot · Black Pepper · Lavender · Amber</p></div><div class="note reveal"><span>02</span><b>BLUSH</b><p>Rose · Peony · Musk · Soft Vanilla</p></div><div class="note reveal"><span>03</span><b>OCEAN</b><p>Citrus · Marine · Cedarwood · Clean Musk</p></div><div class="note reveal"><span>04</span><b>AMBER</b><p>Saffron · Leather · Vanilla · Warm Woods</p></div></div></section>
+<section class="contact" id="contact"><div class="contact-copy reveal"><p class="eyebrow">LET'S TALK</p><h2>Have a question?<br><i>We'd love to hear from you.</i></h2><p>For orders, collaborations, gifting or fragrance questions, send us a message.</p><div class="contact-links"><a href="mailto:hello@rozana.in">hello@rozana.in ↗</a><a href="tel:+919718209148">+91 97182 09148 ↗</a><a href="https://wa.me/919718209148" target="_blank">WhatsApp ↗</a><a href="https://www.instagram.com/_aman_singh__81?stkn=MWptejJ2N3R3ejg1Yw%3D%3D&utm_source=qr" target="_blank">Instagram ↗</a></div></div><form class="contact-form reveal" onsubmit="submitContact(event)"><input required placeholder="Your name"><input required type="email" placeholder="Email address"><input placeholder="Phone number"><textarea required placeholder="How can we help?"></textarea><button class="btn primary full">Send Message ↗</button></form></section>
+</main>
+<footer><div class="footer-brand"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small><p>More than a fragrance. It's a feeling.</p></div><div><h4>Explore</h4><a href="#shop">Shop</a><a href="#custom">Personalise</a><a href="#about">Our Story</a><a href="#contact">Contact</a></div><div><h4>Customer Care</h4><a href="#contact">Contact Us</a><a href="#">Track Order</a><a href="#">Returns & Refunds</a><a href="#">FAQ</a></div><div><h4>Follow</h4><a href="https://www.instagram.com/_aman_singh__81?stkn=MWptejJ2N3R3ejg1Yw%3D%3D&utm_source=qr" target="_blank">Instagram ↗</a><a href="tel:+919718209148">+91 97182 09148 ↗</a><a href="https://wa.me/919718209148" target="_blank">WhatsApp ↗</a><a href="mailto:hello@rozana.in">Email ↗</a></div><div class="copyright">© 2026 ROZANA. All rights reserved.</div></footer>
+<div class="search-modal" id="searchModal"><div class="search-box"><button class="close" onclick="closeSearch()">×</button><p class="eyebrow">SEARCH ROZANA</p><input id="searchInput" placeholder="Search Noir, Blush, Ocean..." oninput="searchProducts(this.value)"><div id="searchResults"></div></div></div>
+<div class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><p class="eyebrow">YOUR BAG</p><h3>ROZANA</h3></div><button onclick="closeCart()">×</button></div><div class="cart-items" id="cartItems"></div><div class="drawer-foot"><div><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><button class="btn primary full" onclick="openCheckout()">Proceed to Checkout ↗</button><small>Taxes/shipping calculated at checkout.</small></div></div><div class="overlay" id="overlay" onclick="closeAll()"></div>
+<div class="checkout-modal" id="checkoutModal"><div class="checkout-card"><button class="close" onclick="closeCheckout()">×</button><p class="eyebrow">CHECKOUT</p><h2>Complete your order.</h2><div id="checkoutSummary"></div><form onsubmit="placeOrder(event)"><input required name="name" placeholder="Full name"><input required name="phone" placeholder="Mobile number"><input required name="address" placeholder="Delivery address"><div class="pay-options"><label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label><label><input type="radio" name="payment" value="upi"> UPI / Online Payment</label></div><button class="btn primary full">Place Order ↗</button><small class="payment-note">Online gateway can be connected after your Razorpay/merchant account is ready.</small></form></div></div>
+<div class="quick-modal" id="quickModal"><div class="quick-card"><button class="close" onclick="closeQuick()">×</button><img id="quickImg" src="" alt=""><div><p class="eyebrow">ROZANA SIGNATURE</p><h2 id="quickName"></h2><p id="quickPrice"></p><p>Designed for a memorable, modern presence. Add it to your bag and make it yours.</p><button class="btn primary" id="quickAdd">Add to Bag ↗</button></div></div></div>
+<div class="toast" id="toast"></div><script src="script.js"></script>
+</body></html>
