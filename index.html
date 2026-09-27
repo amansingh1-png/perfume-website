@@ -12,6 +12,7 @@
 </head>
 <body>
 <div class="noise"></div><div class="cursor-glow"></div>
+<div class="announce" id="announce"><div class="announce-track" id="announceTrack"></div></div>
 <header class="nav" id="nav">
   <a class="brand" href="#home"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small></a>
   <nav class="links"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#custom">Personalise</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
@@ -43,6 +44,7 @@
   <article class="product reveal" data-name="Blush Aura" data-price="2299" data-img="blush.jpg"><div class="product-img"><span>NEW</span><img src="blush.jpg" alt="Blush Aura"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Floral · Fruity · Fresh</p><h3>Blush Aura</h3><div class="price">₹2,299 <del>₹2,999</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Blush Aura',2299,'blush.jpg')">Add to Bag</button></article>
   <article class="product reveal" data-name="Ocean Drive" data-price="2199" data-img="ocean.jpg"><div class="product-img"><span>POPULAR</span><img src="ocean.jpg" alt="Ocean Drive"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Citrus · Aquatic · Fresh</p><h3>Ocean Drive</h3><div class="price">₹2,199 <del>₹2,899</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Ocean Drive',2199,'ocean.jpg')">Add to Bag</button></article>
   <article class="product reveal" data-name="Amber Touch" data-price="2799" data-img="amber.jpg"><div class="product-img"><span>LIMITED</span><img src="amber.jpg" alt="Amber Touch"><button class="quick" onclick="quickView(this)">Quick view</button></div><p class="category">Amber · Vanilla · Warm</p><h3>Amber Touch</h3><div class="price">₹2,799 <del>₹3,699</del><em>24% OFF</em></div><button class="add" onclick="addToCart('Amber Touch',2799,'amber.jpg')">Add to Bag</button></article>
+  <article class="product reveal bundle-tile" onclick="location.hash='custom'"><div class="product-img bundle-visual"><img src="rozana-reference.jpg" alt="Build your own ROZANA set"></div><p class="category">PERSONALISED · YOUR PICK</p><h3>Build Your Own Set</h3><div class="price">From ₹2,199</div><button class="add" onclick="event.stopPropagation();location.hash='custom'">Customise Your Set ↗</button></article>
  </div>
 </section>
 <section class="experience"><div class="experience-copy reveal"><p class="eyebrow">THE ROZANA EXPERIENCE</p><h2>Wear the mood.<br><i>Leave the memory.</i></h2><p>Every bottle is designed to feel as considered as the fragrance inside it — understated, modern and unmistakably ROZANA.</p><a class="btn primary" href="#custom">Build Your Set ↗</a></div><div class="experience-art"><img src="rozana-reference.jpg" alt="ROZANA fragrance experience"></div></section>
@@ -83,6 +85,28 @@
 </section>
 <section class="founder" id="about"><div class="founder-img reveal"><img src="ceo.jpg" alt="Aman Raj Singh, Founder & CEO of ROZANA"></div><div class="founder-copy reveal"><p class="eyebrow">FROM THE FOUNDER</p><h2>Built with a belief that <i>presence matters.</i></h2><p>ROZANA was created around one simple idea: fragrance should become part of your identity, not just another product on your shelf.</p><p>We are building a modern fragrance house where thoughtful design, memorable scent profiles and a personal experience come together.</p><div class="signature">Aman Raj Singh <span>Founder & CEO · ROZANA</span></div></div></section>
 <section class="notes"><div class="notes-head reveal"><p class="eyebrow">FRAGRANCE NOTES</p><h2>Choose by <i>feeling.</i></h2></div><div class="note-grid"><div class="note reveal"><span>01</span><b>NOIR</b><p>Bergamot · Black Pepper · Lavender · Amber</p></div><div class="note reveal"><span>02</span><b>BLUSH</b><p>Rose · Peony · Musk · Soft Vanilla</p></div><div class="note reveal"><span>03</span><b>OCEAN</b><p>Citrus · Marine · Cedarwood · Clean Musk</p></div><div class="note reveal"><span>04</span><b>AMBER</b><p>Saffron · Leather · Vanilla · Warm Woods</p></div></div></section>
+<section class="seo">
+  <div class="seo-inner reveal">
+    <h2>Buy ROZANA Perfume Online — <i>Premium Everyday Fragrance</i></h2>
+    <div class="seo-body" id="seoBody">
+      <p>Welcome to the official ROZANA fragrance collection. Discover premium Eau de Parfum crafted for individuals who appreciate presence, confidence and everyday style. Founded by Aman Raj Singh, ROZANA brings together thoughtfully designed fragrances that balance quality ingredients, lasting performance and modern craftsmanship.</p>
+      <p class="seo-more">Whether you're looking for an everyday signature scent or something for a special evening, the ROZANA collection is curated to suit different moods and personalities. Every bottle — from the woody depth of Noir Essence to the aquatic freshness of Ocean Drive — is designed to feel as considered as the fragrance inside it. Shopping directly from the official ROZANA store gives you authentic products, secure checkout and dedicated customer support, with fast pan-India delivery on every order.</p>
+    </div>
+    <button class="text-btn" id="seoToggle" onclick="toggleSeo()">Read More ↓</button>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="faq-head reveal"><p class="eyebrow">GOOD TO KNOW</p><h2>Frequently asked <i>questions.</i></h2></div>
+  <div class="faq-list reveal">
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Is ROZANA an official brand? <span>+</span></button><div class="faq-a">Yes. ROZANA is founded and run by Aman Raj Singh, offering premium Eau de Parfum fragrances direct through this official website.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">Are all ROZANA fragrances Eau de Parfum? <span>+</span></button><div class="faq-a">Yes — every fragrance in the current collection is formulated as an Eau de Parfum (EDP) for a longer-lasting, premium wear.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How do I pick the right scent? <span>+</span></button><div class="faq-a">Use the "Build Your Own Set" personalisation tool — answer a few quick questions about your day and we'll match you to a fragrance mood, or browse the collection by category.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">What payment options are available? <span>+</span></button><div class="faq-a">Cash on Delivery is available pan-India. Online/UPI payment can be enabled once our Razorpay merchant account is active.</div></div>
+    <div class="faq-item"><button class="faq-q" onclick="toggleFaq(this)">How can I track my order or get support? <span>+</span></button><div class="faq-a">Message us directly on WhatsApp or email hello@rozana.in — we reply with order status and any support you need.</div></div>
+  </div>
+</section>
+
 <section class="contact" id="contact"><div class="contact-copy reveal"><p class="eyebrow">LET'S TALK</p><h2>Have a question?<br><i>We'd love to hear from you.</i></h2><p>For orders, collaborations, gifting or fragrance questions, send us a message.</p><div class="contact-links"><a href="mailto:hello@rozana.in">hello@rozana.in ↗</a><a href="tel:+919718209148">+91 97182 09148 ↗</a><a href="https://wa.me/919718209148" target="_blank">WhatsApp ↗</a><a href="https://www.instagram.com/_aman_singh__81?stkn=MWptejJ2N3R3ejg1Yw%3D%3D&utm_source=qr" target="_blank">Instagram ↗</a></div></div><form class="contact-form reveal" onsubmit="submitContact(event)"><input required placeholder="Your name"><input required type="email" placeholder="Email address"><input placeholder="Phone number"><textarea required placeholder="How can we help?"></textarea><button class="btn primary full">Send Message ↗</button></form></section>
 </main>
 <footer><div class="footer-brand"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small><p>More than a fragrance. It's a feeling.</p></div><div><h4>Explore</h4><a href="#shop">Shop</a><a href="#custom">Personalise</a><a href="#about">Our Story</a><a href="#contact">Contact</a></div><div><h4>Customer Care</h4><a href="#contact">Contact Us</a><a href="#">Track Order</a><a href="#">Returns & Refunds</a><a href="#">FAQ</a></div><div><h4>Follow</h4><a href="https://www.instagram.com/_aman_singh__81?stkn=MWptejJ2N3R3ejg1Yw%3D%3D&utm_source=qr" target="_blank">Instagram ↗</a><a href="tel:+919718209148">+91 97182 09148 ↗</a><a href="https://wa.me/919718209148" target="_blank">WhatsApp ↗</a><a href="mailto:hello@rozana.in">Email ↗</a></div><div class="copyright">© 2026 ROZANA. All rights reserved.</div></footer>
