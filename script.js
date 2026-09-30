@@ -26,20 +26,20 @@ $$('.mode').forEach(b=>b.onclick=()=>{ $$('.mode').forEach(x=>x.classList.remove
 $$('.answer').forEach(b=>b.onclick=()=>{ const q=b.dataset.q; quizAnswers[q]=b.dataset.v; $$(`.answer[data-q=\"${q}\"]`).forEach(x=>x.classList.remove('selected')); b.classList.add('selected'); });
 function recommend(){
   const a=quizAnswers;
-  if(['soft'].includes(a.vibe)) return ['Blush Aura',2299,'Floral, soft and effortless — made for a gentle signature.'];
-  if(['clean'].includes(a.vibe)||['morning','work'].includes(a.time)||['hot'].includes(a.weather)) return ['Ocean Drive',2199,'Fresh, clean and aquatic — perfect for an easy everyday trail.'];
-  if(['bold'].includes(a.vibe)||['bold'].includes(a.pace)||['evening','night'].includes(a.time)) return ['Noir Essence',2499,'Bold, warm and memorable — built to leave an impression.'];
-  if(['trendy'].includes(a.vibe)) return ['Amber Touch',2799,'Warm, modern and distinctive — a statement for your mood.'];
-  return ['Noir Essence',2499,'A versatile signature with depth and presence.'];
+  if(['soft'].includes(a.vibe)) return ['Blush Aura',840,'Floral, soft and effortless — made for a gentle signature.'];
+  if(['clean'].includes(a.vibe)||['morning','work'].includes(a.time)||['hot'].includes(a.weather)) return ['Ocean Drive',812,'Fresh, clean and aquatic — perfect for an easy everyday trail.'];
+  if(['bold'].includes(a.vibe)||['bold'].includes(a.pace)||['evening','night'].includes(a.time)) return ['Noir Essence',924,'Bold, warm and memorable — built to leave an impression.'];
+  if(['trendy'].includes(a.vibe)) return ['Amber Touch',1036,'Warm, modern and distinctive — a statement for your mood.'];
+  return ['Noir Essence',924,'A versatile signature with depth and presence.'];
 }
 function revealPersonalisedSet(){const r=recommend(); $('#setRecommendation').textContent=`Your ROZANA match: ${r[0]} — ${r[2]}`; $('#setTotal').textContent=money(r[1]); $('#customResult').innerHTML=`<strong>${r[0]}</strong><span>${r[2]}</span><button class=\"btn primary full\" onclick=\"addToCart('${r[0]}',${r[1]},'${r[0].toLowerCase().split(' ')[0]}.jpg')\">Add ${r[0]} to Bag ↗</button>`; $('#customResult').classList.remove('hidden'); toast('Your personalised ROZANA match is ready');}
-function resetPersonalised(){Object.keys(quizAnswers).forEach(k=>delete quizAnswers[k]); $$('.answer').forEach(x=>x.classList.remove('selected')); $('#customResult').classList.add('hidden'); $('#setRecommendation').textContent='Answer a few questions and reveal your signature.'; $('#setTotal').textContent='₹2,499';}
+function resetPersonalised(){Object.keys(quizAnswers).forEach(k=>delete quizAnswers[k]); $$('.answer').forEach(x=>x.classList.remove('selected')); $('#customResult').classList.add('hidden'); $('#setRecommendation').textContent='Answer a few questions and reveal your signature.'; $('#setTotal').textContent='₹924';}
 
 function submitContact(e){e.preventDefault();toast('Thank you — ROZANA will get back to you shortly.');e.target.reset()}
 function toggleMenu(){const m=$('#mobileMenu');m.classList.toggle('show')}
 function toggleSeo(){const b=document.getElementById('seoBody');const t=document.getElementById('seoToggle');const open=b.classList.toggle('open');t.textContent=open?'Read Less ↑':'Read More ↓';}
 function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(x=>x.classList.remove('open'));if(!isOpen)item.classList.add('open');}
-const ANNOUNCEMENTS=['Free shipping on all prepaid orders','COD available Pan-India','Flat 24% off — today only','Answer 3 questions, get your personalised set'];
+const ANNOUNCEMENTS=['Flat 72% off — storewide launch offer','Free shipping on all prepaid orders','COD available Pan-India','Secret Gift Card available with any perfume'];
 document.getElementById('announceTrack').innerHTML=ANNOUNCEMENTS.map(m=>`<span>${m}</span>`).join('')+ANNOUNCEMENTS.map(m=>`<span>${m}</span>`).join('');
 window.addEventListener('scroll',()=>$('#nav').classList.toggle('scrolled',scrollY>30));document.addEventListener('mousemove',e=>{const g=$('.cursor-glow');if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'}});
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});$$('.reveal').forEach(x=>observer.observe(x));renderCart();
