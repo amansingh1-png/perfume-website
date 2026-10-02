@@ -43,7 +43,8 @@ function toggleMenu(){const m=$('#mobileMenu');m.classList.toggle('show')}
 function toggleSeo(){const b=document.getElementById('seoBody');const t=document.getElementById('seoToggle');const open=b.classList.toggle('open');t.textContent=open?'Read Less ↑':'Read More ↓';}
 function toggleFaq(btn){const item=btn.closest('.faq-item');const isOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(x=>x.classList.remove('open'));if(!isOpen)item.classList.add('open');}
 const ANNOUNCEMENTS=['Flat 72% off — storewide launch offer','Free shipping on all prepaid orders','COD available Pan-India','Secret Gift Card available with any perfume'];
-document.getElementById('announceTrack').innerHTML=ANNOUNCEMENTS.map(m=>`<span>${m}</span>`).join('')+ANNOUNCEMENTS.map(m=>`<span>${m}</span>`).join('');
+const announceTrack=document.getElementById('announceTrack');
+if(announceTrack) announceTrack.innerHTML=ANNOUNCEMENTS.map(m=>`<span>${m}</span>`).join('')+ANNOUNCEMENTS.map(m=>`<span>${m}</span>`).join('');
 window.addEventListener('scroll',()=>$('#nav').classList.toggle('scrolled',scrollY>30));document.addEventListener('mousemove',e=>{const g=$('.cursor-glow');if(g){g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'}});
 const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.1});$$('.reveal').forEach(x=>observer.observe(x));renderCart();
 
