@@ -1,30 +1,15 @@
-# ROZANA Firebase Authentication
+# ROZANA Free Email + Password Login
 
-The website now includes:
-- Email + password Login
-- Email + password Sign Up
-- Phone number + OTP sign-in/sign-up
-- Google sign-in/sign-up
-- Logged-in account state + Logout
+The Firebase authentication flow has been removed.
 
-## Firebase Console setup
+ROZANA now uses a simple browser-local email/password account flow so the static website can run without Firebase billing or an external authentication service.
 
-In Firebase Console for project `rozana-ee5dd`:
+### How it works
+- Customer clicks **Login**.
+- Customer can **Create Account** with name, email and password.
+- Existing customers can log in with email + password.
+- The current session is stored locally in the browser.
+- Logout is available from the same account panel.
 
-1. Open **Authentication** → **Sign-in method**.
-2. Enable **Email/Password**.
-3. Enable **Phone**.
-4. Enable **Google** and choose a support email if Firebase asks.
-5. Open **Authentication → Settings → Authorized domains** and add the domain where the website is deployed (for example your Vercel domain). `localhost` is normally available for local testing.
-
-## Important for phone OTP
-
-Firebase Phone Authentication uses reCAPTCHA. The website creates the reCAPTCHA widget automatically when the customer requests an OTP.
-
-## Firebase web configuration
-
-The web app config supplied for ROZANA is included in `auth.js`. Web Firebase config is intended to be present in client-side code. Do not add a Firebase service-account/private-key JSON file to this website.
-
-## Deployment
-
-After enabling the providers and adding the deployed domain under Authorized domains, deploy the website files normally. No server-side Firebase Admin SDK is required for this client-side authentication flow.
+### Important
+This is suitable for a free static/demo store. Passwords are stored in the customer's browser and are **not suitable for production-grade account security**. Before taking real customer accounts or sensitive personal information at scale, connect a proper server-side authentication system.

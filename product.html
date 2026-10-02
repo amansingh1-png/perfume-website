@@ -1,3 +1,45 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ROZANA — Product</title><link rel="stylesheet" href="style.css"></head><body>
-<header class="nav"><a class="logo" href="index.html">ROZANA<span>.</span><small>PERFUME FOR YOUR EVERYDAY</small></a><nav><a href="index.html">Home</a><a href="index.html#shop">Shop</a><a href="couple.html">Him & Her</a><a href="card.html">Personalise</a><a href="contact.html">Contact</a></nav><div class="nav-actions"><a href="cart.html">Bag <b id="cartCount">0</b></a></div></header>
-<main class="product-page"><div class="breadcrumbs"><a href="index.html">Home</a> / Shop / <span id="crumb"></span></div><div class="product-detail"><div class="detail-image"><img id="detailImg"></div><div class="detail-copy"><p class="eyebrow" id="tag"></p><h1 id="name"></h1><p class="category" id="notes"></p><div class="rating">★★★★★ <span>4.8 · Loved by fragrance enthusiasts</span></div><div class="big-price" id="price"></div><p id="description"></p><div class="sizes"><b>Size</b><button class="active">50ml</button><button>100ml</button></div><div class="qty"><button onclick="changeQty(-1)">−</button><span id="qty">1</span><button onclick="changeQty(1)">+</button></div><div class="detail-actions"><button class="btn gold" onclick="buyProduct()">Add to Bag</button><a class="btn line" href="cart.html">View Bag</a></div><details open><summary>Fragrance Notes</summary><p id="detailNotes"></p></details><details><summary>Shipping & Returns</summary><p>Pan-India delivery. Shipping and return policies can be configured before launch.</p></details></div></div></main><script src="script.js"></script><script>loadProductPage();</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="ROZANA product details, fragrance notes, offers and checkout.">
+<title>Product — ROZANA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="product-detail-page">
+<div class="noise"></div><div class="cursor-glow"></div>
+<header class="nav scrolled" id="nav">
+  <a class="brand" href="index.html"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small></a>
+  <nav class="links"><a href="index.html">Home</a><a href="index.html#shop">Shop</a><a href="couple-zone.html">Couple Zone</a><a href="index.html#custom">Personalise</a><a href="index.html#contact">Contact</a></nav>
+  <div class="nav-actions"><button class="icon-btn" onclick="history.back()">←</button><button class="cart-btn" onclick="openCart()">Bag <b id="cartCount">0</b></button></div>
+</header>
+<main class="product-detail-main">
+<section class="product-detail-hero">
+  <div class="detail-visual reveal"><div class="detail-badge" id="detailBadge">SIGNATURE</div><img id="detailImg" src="noir.jpg" alt="ROZANA fragrance"><div class="detail-floating">ROZANA<br><i>More than a fragrance.</i></div></div>
+  <div class="detail-copy reveal">
+    <p class="eyebrow" id="detailCategory">WOODY · SPICY · BOLD</p><h1 id="detailName">Noir Essence</h1>
+    <p class="detail-intro" id="detailIntro"></p>
+    <div class="detail-price"><strong id="detailPrice">₹924</strong><del id="detailOld">₹3,299</del><em id="detailDiscount">72% OFF</em></div>
+    <div class="detail-rating">★★★★★ <span>Signature ROZANA profile</span></div>
+    <div class="detail-actions"><button class="btn primary" id="detailAdd">Add to Bag ↗</button><a class="btn ghost" href="couple-zone.html">Explore Couple Pair ♡</a></div>
+    <div class="coupon-card"><div><span class="eyebrow">FIRST-ORDER COUPON</span><strong>ROZANA20</strong><small>Recommended for your first ROZANA order</small></div><button onclick="copyCoupon()">Use Coupon</button></div>
+    <div class="delivery-card"><b>🚚 Delivery promise</b><span>Delhi · Noida · Gurugram — within 24 hours</span><span>All other locations across India — within 3–4 business days</span></div>
+  </div>
+</section>
+<section class="detail-info section">
+  <div class="detail-info-grid">
+    <div><p class="eyebrow">THE FRAGRANCE</p><h2>Details that make <i>the difference.</i></h2><p id="detailDescription"></p></div>
+    <div class="notes-card"><h3>Fragrance Profile</h3><div id="detailNotes" class="note-list"></div><div class="detail-facts"><span><b>Best for</b><small id="detailBest"></small></span><span><b>Character</b><small id="detailCharacter"></small></span><span><b>Experience</b><small id="detailExperience"></small></span></div></div>
+  </div>
+</section>
+<section class="product-faq section"><div class="section-head"><div><p class="eyebrow">PRODUCT FAQ</p><h2>Questions, <i>answered.</i></h2></div></div><div id="detailFaq" class="faq-list"></div></section>
+<section class="couple-recommend reveal" id="coupleRecommend"><div><p class="eyebrow">FIRST TIME AT ROZANA?</p><h2>Make it <i>two.</i></h2><p>Pair your fragrance with our couple collection for a gift-ready experience. ISHQ × JUNOON comes with the Secret Gift Card option.</p></div><a class="btn primary" href="couple-zone.html">Discover Couple Zone ↗</a></section>
+</main>
+<footer><div class="footer-brand"><span>ROZANA</span><small>PERFUME FOR YOUR EVERYDAY</small><p>More than a fragrance. It's a feeling.</p></div><div><h4>Explore</h4><a href="index.html#shop">Shop</a><a href="couple-zone.html">Couple Zone</a><a href="index.html#custom">Personalise</a><a href="founder.html">Know Our Founder</a></div><div><h4>Customer Care</h4><a href="index.html#contact">Contact Us</a><a href="#">Returns & Refunds</a><a href="index.html#faq">FAQ</a></div><div><h4>Follow</h4><a href="https://www.instagram.com/_aman_singh__81?stkn=MWptejJ2N3R3ejg1Yw%3D%3D&utm_source=qr" target="_blank">Instagram ↗</a><a href="https://wa.me/919718209148" target="_blank">WhatsApp ↗</a><a href="mailto:hello@rozana.in">Email ↗</a></div><div class="policy-strip"><span><b>Delivery</b> Pan-India in 3–4 business days</span><span><b>Express</b> Delhi · Noida · Gurugram within 24 hours</span><span><b>Returns & Refunds</b> Damaged, incorrect or eligible return requests can be raised with ROZANA Customer Care. Please keep the product unused and retain the original packaging.</span></div><div class="copyright">© 2026 ROZANA. All rights reserved.</div></footer>
+<div class="cart-drawer" id="cartDrawer"><div class="drawer-head"><div><p class="eyebrow">YOUR BAG</p><h3>ROZANA</h3></div><button onclick="closeCart()">×</button></div><div class="cart-items" id="cartItems"></div><div class="drawer-foot"><div><span>Subtotal</span><strong id="cartTotal">₹0</strong></div><button class="btn primary full" onclick="openCheckout()">Proceed to Checkout ↗</button><small>Taxes/shipping calculated at checkout.</small></div></div><div class="overlay" id="overlay" onclick="closeAll()"></div>
+<div class="checkout-modal" id="checkoutModal"><div class="checkout-card"><button class="close" onclick="closeCheckout()">×</button><p class="eyebrow">CHECKOUT</p><h2>Complete your order.</h2><div id="checkoutSummary"></div><form onsubmit="placeOrder(event)"><input required name="name" placeholder="Full name"><input required name="phone" placeholder="Mobile number"><input required name="address" placeholder="Delivery address"><label class="gift-toggle"><input type="checkbox" id="giftCardToggle" name="giftCard"> <span><b>Add a Secret Gift Card</b><small>Your message stays hidden and goes with the order.</small></span></label><div id="giftCardBox" class="gift-card-box hidden"><label>Write your heart out <span id="wordCount">0 / 200 words</span></label><textarea id="giftMessage" name="giftMessage" maxlength="1400" placeholder="Write your message here…" oninput="updateGiftWords()"></textarea><small>Maximum 200 words.</small></div><div class="pay-options"><label><input type="radio" name="payment" value="cod" checked> Cash on Delivery</label><label><input type="radio" name="payment" value="upi"> UPI / Online Payment</label></div><button class="btn primary full">Place Order ↗</button><small class="payment-note">Online gateway can be connected when your merchant account is ready.</small></form></div></div>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script><script src="auth.js"></script><script src="product.js"></script>
+</body></html>
